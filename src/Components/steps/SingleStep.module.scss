@@ -1,0 +1,49 @@
+@import "../../styles/varibles.scss";
+
+.step {
+  transition: all 200ms ease-in;
+  .stepName {
+    padding: 0px 2.5rem;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid $basic-grey;
+    position: relative;
+    transition: all 200ms ease-in;
+    &::before {
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-color: $basic-light;
+      border-radius: 25px;
+      border: 1px solid $basic-grey;
+      position: absolute;
+      top: -15px;
+      left: 42%;
+      transition: all 200ms ease-in;
+    }
+    h4 {
+      font-weight: 500;
+      color: $basic-grey;
+      text-align: center;
+      line-height: 1;
+    }
+    @media (max-width: 567px) {
+      padding: 0px 0.5rem;
+    }
+  }
+}
+
+.complete {
+  .stepName {
+    border-top: 2px solid $secondary;
+    &::before {
+      background-color: $secondary;
+      border: none;
+      transition: all 200ms ease-in;
+    }
+    h4 {
+      font-weight: 600;
+      color: $secondary-dark;
+    }
+  }
+}

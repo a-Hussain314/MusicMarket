@@ -1,0 +1,27 @@
+@import "../styles/varibles.scss";
+
+.home {
+    .homeContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        @media (max-width: 567px) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .formsBox {
+            width: 60%;
+            @media (max-width: 567px) {
+                width: auto;
+                order: 1;
+            }
+        }
+        .InvoiceBox {
+            width: 35%;
+            @media (max-width: 567px) {
+                width: 90%;
+                margin: 1rem auto 0;
+            }
+        }
+    }
+}

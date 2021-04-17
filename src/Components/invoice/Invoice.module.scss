@@ -1,0 +1,33 @@
+@import "../../styles/varibles.scss";
+
+.invoice {
+    margin: 3rem auto 1rem;
+    background-color: white;
+    padding: 2.5rem 1rem;
+    // border: 2px solid $basic-light-grey;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    @media (max-width: 567px) {
+        width: auto;
+        margin: 0;
+        padding: 0rem 1rem 1.5rem;
+    }
+    h3 {
+        text-align: center;
+        margin: 0;
+        padding: 1.5rem 0;
+        color: $secondary-dark;
+    }
+    p {
+        width: 80%;
+        margin: 0 auto;
+        color: $basic-dark-grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        &:first-of-type {
+            padding: 0 0 0.5rem 0;
+            border-bottom: 1px $basic-grey solid;
+        }
+    }
+}

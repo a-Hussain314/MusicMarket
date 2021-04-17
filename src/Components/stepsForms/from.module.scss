@@ -1,0 +1,122 @@
+@import "../../styles/varibles.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  margin: 3rem auto 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.inputGroup {
+  background-color: $basic-light-grey;
+  display: block;
+  margin: 0.5rem 0;
+  position: relative;
+  &:hover {
+    background-color: $basic-grey;
+  }
+
+  label {
+    padding: 0.75rem 5%;
+    width: 90%;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    transition: color 0.25s ease;
+    overflow: hidden;
+
+    &:before {
+      width: 10px;
+      height: 10px;
+      content: "";
+      background-color: $primary;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: all 0.25s ease;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &:after {
+      width: 1.6rem;
+      height: 1.6rem;
+      content: "";
+      border: 2px solid #d1d7dc;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3Csvg width='auto' height='auto' viewBox='0 0 auto auto' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 200ms ease-in;
+      @media (max-width: 567px) {
+        background-position: -2px -2px;
+      }
+    }
+  }
+
+  input:checked ~ label {
+    color: #fff;
+
+    &:hover {
+      &::before {
+        background-color: $primary-dark;
+      }
+    }
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    &:after {
+      background-color: $secondary;
+      border-color: $secondary;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.buttonsBox {
+  text-align: center;
+}
+
+.submitInput {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  transition: 0.25s all ease;
+  border: 1px solid $basic-light-grey;
+  border-radius: 4px;
+  transition: 0.25s border ease 0.1s;
+  &:focus {
+    outline: none;
+    border: 1px solid $primary;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

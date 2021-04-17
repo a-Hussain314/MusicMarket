@@ -1,0 +1,28 @@
+@import "../../styles/varibles.scss";
+.PrimaryButton {
+    border: none;
+    border-radius: 0.33rem;
+    color: $basic-light;
+    background-color: $secondary;
+    transition: all 0.25s ease-in-out;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 6rem;
+    text-align: center;
+    padding: 0.4rem 0rem;
+    margin: 1rem;
+    cursor: pointer;
+    &:hover {
+        background-color: $secondary-dark;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:disabled {
+        opacity: 0.33;
+        cursor: not-allowed;
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+}
