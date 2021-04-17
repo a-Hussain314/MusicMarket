@@ -18,16 +18,15 @@
         color: $secondary-dark;
     }
     p {
-        width: 80%;
         margin: 0 auto;
+        padding: 0.5rem 0;
         color: $basic-dark-grey;
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-weight: bold;
-        &:first-of-type {
-            padding: 0 0 0.5rem 0;
-            border-bottom: 1px $basic-grey solid;
+        &:last-of-type {
+            border-top: 1px $basic-grey solid;
         }
     }
 }
